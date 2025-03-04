@@ -26,10 +26,6 @@ class HomeController extends AbstractController
         return $this->render('article.html.twig', []);
     }
 
-    #[Route('/addArticle', name: 'app_addArticle')]
-    public function addArticle(): Response
-    {
-        return $this->render('addArticle.html.twig', []);
-    }    
 
+    
 }

@@ -17,7 +17,7 @@
         <ul class="flex space-x-6 text-lg uppercase">
             <li><a href="{{ path('app_home') }}" class="hover:text-cyan-400 transition duration-300">Home</a></li>
             <li><a href="{{ path('app_article') }}" class="font-bold text-cyan-400 border-b-2 border-cyan-400">Articles</a></li>
-            <li><a href="{{ path('app_addArticle') }}" class="hover:text-cyan-400 transition duration-300">Ajouter Articles</a></li>
+            <li><a href="{{ path('app_addArticle') }}" class="hover:text-cyan-400 transition duration-300">Ajouter Article</a></li>
             <li><a href="{{ path('app_home') }}" class="hover:text-cyan-400 transition duration-300">Inscription</a></li>
            <li><a href="{{ path('app_connexion') }}" class="hover:text-cyan-400 transition duration-300">Connexion</a></li>        </ul>
     </nav>
@@ -38,14 +38,16 @@
     <div class="grid grid-cols-3 gap-6 px-10">
         {% for i in 1..6 %}
         <div class="bg-gray-900 bg-opacity-70 p-5 shadow-2xl rounded-xl border border-gray-700 flex flex-col">
-            <!-- Image de Kevbot en petit -->
-<img src="{{ asset('images/kevAI.png') }}" alt="KevAi" class="w-64 h-48 mb-3 mx-auto opacity-90 hover:opacity-100 transition duration-300">
-            
-            <h2 class="text-xl text-cyan-400 font-bold">KevAi</h2>
-            <p class="text-gray-400">Robot de debbugin</p>
+
+
+    <!-- Image de Kevbot en miniature -->
+<img src="{{ asset('images/kevAI.png') }}" alt="Kevbot" class="w-96 h-48 mb-3 mx-auto opacity-90 hover:opacity-100 transition duration-300">
+            <h2 class="text-xl text-cyan-400 font-bold">id 01</h2>
+            <h2 class="text-xl text-cyan-400 font-bold">Kevbot</h2>
+            <p class="text-gray-400">Eradicateur de bugs, dôté de l'iKev</p>
             <div class="flex justify-between text-gray-500 mt-3">
-                <span>Auteur</span>
-                <span>Date 04/03/2025</span>
+                <span>dr.Quentin</span>
+                <span>Date 04/03/2049</span>
             </div>
         </div>
         {% endfor %}
