@@ -19,15 +19,15 @@ class ArticleController extends AbstractController
         $form = $this->createFormBuilder()
             ->add('title', TextType::class, [
                 'label' => "Titre de l'article",
-                'attr' => ['class' => 'w-full px-4 py-2 rounded-lg text-black']
+                'attr' => ['class' => 'w-full px-4 py-2 rounded-lg text-white bg-gray-900 border border-cyan-500 focus:ring-2 focus:ring-cyan-400 focus:outline-none']
             ])
             ->add('content', TextareaType::class, [
                 'label' => "Contenu de l'article",
-                'attr' => ['class' => 'w-full px-4 py-2 rounded-lg text-black', 'rows' => 5]
+                'attr' => ['class' => 'w-full px-4 py-2 rounded-lg text-white bg-gray-900 border border-cyan-500 focus:ring-2 focus:ring-cyan-400 focus:outline-none', 'rows' => 5]
             ])
             ->add('author', TextType::class, [
                 'label' => "Auteur",
-                'attr' => ['class' => 'w-full px-4 py-2 rounded-lg text-black']
+                'attr' => ['class' => 'w-full px-4 py-2 rounded-lg text-white bg-gray-900 border border-cyan-500 focus:ring-2 focus:ring-cyan-400 focus:outline-none']
             ])
             ->add('submit', SubmitType::class, [
                 'label' => 'Publier',
@@ -35,15 +35,12 @@ class ArticleController extends AbstractController
             ])
             ->getForm();
 
-        // Vérifier si le formulaire est bien généré
-        dump($form->createView());
-
         return $this->render('addArticle.html.twig', [
             'form' => $form->createView(),
-            'title' => "Créer un nouvel article",
-            'content' => "Remplissez le formulaire ci-dessous pour ajouter un nouvel article à la base de données.",
+            'title' => "Créer un nouvel article", 
+            'content' => "Remplissez le formulaire ci-dessous pour ajouter un nouvel article à la base de données.", 
             'author' => "Dr. Quentin",
-            'date' => date('d/m/Y')
+            'date' => date('d/m/Y') 
         ]);
     }
 }
