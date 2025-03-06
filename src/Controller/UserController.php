@@ -25,10 +25,10 @@ final class UserController extends AbstractController
         return $this->render('user/login.html.twig');
     }
 
-    #[Route('/accounts', name: 'app_user_accounts')]
+    #[Route('/account', name: 'app_user_accounts')]
     public function showAllAccounts(): Response
     {
-        return $this->render('user/accounts.html.twig', [
+        return $this->render('accounts.html.twig', [
             "accounts" => $this->accountRepository->findAll()
         ]);
     }
